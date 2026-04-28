@@ -17,12 +17,10 @@
 
         .container { max-width: 900px; margin: auto; padding: 40px 20px; }
 
-        /* Quick Setup Box */
         .quick-setup { background: rgba(138, 43, 226, 0.05); border: 1px solid rgba(138, 43, 226, 0.3); border-radius: 12px; padding: 30px; margin-bottom: 50px; }
         .quick-setup h2 { margin-top: 0; display: flex; align-items: center; font-size: 1.2em; color: #00ff00; }
         .quick-setup h2::before { content: '⚡'; margin-right: 10px; }
 
-        /* Step Section */
         .step-section { margin-bottom: 60px; }
         .step-title { border-bottom: 1px solid #30363d; padding-bottom: 10px; margin-bottom: 25px; display: flex; align-items: center; }
         .step-number { background: var(--primary); color: white; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-right: 15px; font-weight: bold; font-size: 0.9em; }
@@ -30,16 +28,27 @@
         .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; border: 1px solid #30363d; margin: 20px 0; background: #000; }
         .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
 
-        .btn-store { display: inline-flex; align-items: center; background: #21262d; border: 1px solid #30363d; padding: 10px 20px; border-radius: 6px; color: white; margin-right: 10px; margin-bottom: 10px; transition: 0.2s; }
+        .btn-store { display: inline-flex; align-items: center; background: #21262d; border: 1px solid #30363d; padding: 10px 20px; border-radius: 6px; color: white; margin-right: 10px; margin-bottom: 10px; transition: 0.2s; font-size: 0.9em; }
         .btn-store:hover { background: #30363d; border-color: var(--primary); }
 
-        /* Troubleshooting */
-        .troubleshoot { background: #161b22; border-radius: 12px; padding: 30px; border: 1px solid #f1e05a55; }
-        .troubleshoot h2 { color: #f1e05a; font-size: 1.2em; margin-top: 0; }
-        .problem-item { margin-bottom: 20px; border-bottom: 1px dotted #30363d; padding-bottom: 15px; }
-        .problem-item strong { color: #ff4b4b; display: block; margin-bottom: 5px; }
+        /* Bouton Téléchargement Script */
+        .btn-download { 
+            display: inline-block; 
+            background: linear-gradient(135deg, #8a2be2, #4b0082); 
+            color: white; 
+            padding: 15px 30px; 
+            border-radius: 8px; 
+            font-weight: bold; 
+            font-family: 'Orbitron';
+            text-align: center;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(138, 43, 226, 0.4);
+            transition: 0.3s;
+        }
+        .btn-download:hover { transform: translateY(-3px); box-shadow: 0 8px 25px var(--primary); }
 
-        footer { text-align: center; padding: 60px; color: #484f58; font-size: 0.8em; border-top: 1px solid #30363d; }
+        .troubleshoot { background: #161b22; border-radius: 12px; padding: 30px; border: 1px solid #f1e05a55; }
+        footer { text-align: center; padding: 60px; color: #484f58; font-size: 0.8em; }
     </style>
 </head>
 <body>
@@ -51,81 +60,49 @@
 
     <div class="container">
         <h1>Guide d'Installation Rapide</h1>
-        <p>Suivez ces instructions pour configurer votre sniper automatique en moins de 5 minutes.</p>
 
         <div class="quick-setup">
-            <h2>Quick Setup (Résumé)</h2>
-            <ol style="padding-left: 20px;">
-                <li>Installez <strong>Tampermonkey</strong> sur votre navigateur.</li>
-                <li>Activez le <strong>Mode Développeur</strong> dans vos extensions.</li>
-                <li>Ajoutez le script fourni par le bot : <strong>ELITE-HUNTER.user.js</strong>.</li>
-                <li>Lancez <strong>Shuffle.com</strong> et laissez la magie opérer.</li>
-            </ol>
+            <h2>Pré-requis</h2>
+            <p>1. Un compte Shuffle actif.<br>2. Votre forfait VIP activé sur le bot <a href="https://t.me/S_power_manager_bot">@S_power_manager_bot</a>.</p>
         </div>
 
         <div class="step-section">
             <h2 class="step-title"><span class="step-number">1</span> Installer Tampermonkey</h2>
-            <p>Tampermonkey est le gestionnaire de scripts indispensable pour faire tourner ELITE-CODE-HUNTER. Choisissez votre navigateur :</p>
-            <div style="margin: 20px 0;">
-                <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo" class="btn-store">🌐 Chrome Web Store</a>
-                <a href="https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepbluehaoandjt" class="btn-store">🟦 Edge Add-ons</a>
-            </div>
+            <p>Téléchargez l'extension officielle pour votre navigateur :</p>
+            <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo" class="btn-store">🌐 Chrome / Brave</a>
+            <a href="https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepbluehaoandjt" class="btn-store">🟦 Microsoft Edge</a>
+        </div>
+
+        <div class="step-section">
+            <h2 class="step-title"><span class="step-number">2</span> Activer le Mode Développeur</h2>
+            <p>Pour autoriser l'exécution du sniper, allez dans vos extensions et activez le <strong>"Mode Développeur"</strong> (Developer Mode) en haut à droite de votre navigateur.</p>
+        </div>
+
+        <div class="step-section">
+            <h2 class="step-title"><span class="step-number">3</span> Télécharger le Script ELITE</h2>
+            <p>Cliquez sur le bouton ci-dessous pour installer la dernière version du script (V82.6) :</p>
+            
+            <a href="ELITE-HUNTER.user.js" class="btn-download">🚀 TÉLÉCHARGER LE SCRIPT (.user.js)</a>
+
+            <p style="font-size: 0.9em; color: #888;">Note : Si Tampermonkey est bien installé, une page s'ouvrira automatiquement pour vous proposer de cliquer sur <strong>"Installer"</strong>.</p>
+            
             <div class="video-container">
                 <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
             </div>
         </div>
 
         <div class="step-section">
-            <h2 class="step-title"><span class="step-number">2</span> Activer le Mode Développeur</h2>
-            <p>Certains navigateurs bloquent les scripts externes. Pour autoriser le sniper :</p>
-            <ul>
-                <li>Allez dans <code>chrome://extensions</code> (ou via le menu Extensions).</li>
-                <li>Cochez la case <strong>"Mode Développeur"</strong> en haut à droite.</li>
-                <li>Dans les paramètres de Tampermonkey, assurez-vous que <strong>"Autoriser l'accès aux URL de fichiers"</strong> est activé.</li>
-            </ul>
-        </div>
-
-        <div class="step-section">
-            <h2 class="step-title"><span class="step-number">3</span> Installer le Script ELITE</h2>
-            <p>Une fois votre abonnement validé sur le bot <strong>@S_power_manager_bot</strong>, vous recevrez un lien vers le script.</p>
-            <ol>
-                <li>Cliquez sur le lien du script (se termine par <code>.user.js</code>).</li>
-                <li>Une page Tampermonkey va s'ouvrir. Cliquez sur le bouton <strong>"Installer"</strong> ou <strong>"Mettre à jour"</strong>.</li>
-                <li>Redémarrez votre navigateur pour finaliser l'injection.</li>
-            </ol>
-        </div>
-
-        <div class="step-section">
-            <h2 class="step-title"><span class="step-number">4</span> Connexion & Auto-Claim</h2>
-            <p>Allez sur <strong>Shuffle.com</strong> et connectez-vous. Le script détecte votre pseudo Shuffle automatiquement.</p>
-            <ul>
-                <li>Le script injecte un panneau discret en haut de la page.</li>
-                <li>Cliquez sur <strong>"Connect"</strong> si la connexion ne se fait pas toute seule.</li>
-                <li>Une fois le statut <strong>"CONNECTED"</strong> affiché, vous êtes prêt. Le script claimera les codes dès leur apparition.</li>
-            </ul>
+            <h2 class="step-title"><span class="step-number">4</span> Utilisation sur Shuffle</h2>
+            <p>Connectez-vous à votre compte sur <strong>Shuffle.com</strong>. Le script détecte votre pseudo. Si votre VIP est actif, le voyant passera au <strong style="color: #00ff00;">VERT</strong> et le sniping commencera immédiatement.</p>
         </div>
 
         <div class="troubleshoot">
-            <h2>🛠️ Dépannage & Astuces</h2>
-            
-            <div class="problem-item">
-                <strong>Le script n'apparaît pas sur Shuffle :</strong>
-                Vérifiez que Tampermonkey est bien activé et que le Mode Développeur est ON. Essayez de vider le cache du navigateur.
-            </div>
-
-            <div class="problem-item">
-                <strong>Message "Subscription Expired" :</strong>
-                Assurez-vous d'être connecté avec le bon pseudo Shuffle. Si vous avez changé de pseudo, contactez le support du bot.
-            </div>
-
-            <div class="problem-item">
-                <strong>Conseil de performance :</strong>
-                Pour un sniping à 0ms, désactivez le "Mode Économie de mémoire" dans les paramètres de votre navigateur.
-            </div>
+            <h2>💡 Astuce Performance</h2>
+            <p>Pour une vitesse maximale, laissez l'onglet Shuffle visible (ne réduisez pas la fenêtre du navigateur). Les navigateurs ralentissent les scripts dans les onglets cachés.</p>
         </div>
 
         <footer>
-            &copy; 2026 ELITE-CODE-HUNTER. Besoin d'aide supplémentaire ? Rejoignez notre canal support sur Telegram.
+            &copy; 2026 ELITE-CODE-HUNTER.
         </footer>
     </div>
 
