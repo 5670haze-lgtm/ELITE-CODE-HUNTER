@@ -3,188 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ELITE-CODE-HUNTER | Sniper Shuffle 0ms</title>
+    <title>ELITE-CODE-HUNTER | Sniper Shuffle</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        :root { 
-            --primary: #8a2be2; /* Mauve */
-            --gold: #ebcc8a;    /* Doré */
-            --bg: #080808; 
-            --card: #121212; 
-        }
+        :root { --primary: #8a2be2; --gold: #ebcc8a; --bg: #080808; }
+        body { background-color: var(--bg); color: white; font-family: 'Roboto', sans-serif; margin: 0; text-align: center; }
         
-        body { 
-            background-color: var(--bg); 
-            color: white; 
-            font-family: 'Roboto', sans-serif; 
-            margin: 0; 
-            text-align: center; 
-        }
-
-        h1, h2, h3, .brand { 
-            font-family: 'Orbitron', sans-serif; 
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        /* --- EFFET DÉGRADÉ MAUVE-DORÉ --- */
+        /* DÉGRADÉ MAUVE ET OR */
         .gradient-text {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--gold) 50%, var(--primary) 100%);
+            background: linear-gradient(135deg, #8a2be2 0%, #ebcc8a 50%, #8a2be2 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            color: transparent;
-            text-shadow: 0 0 15px rgba(138, 43, 226, 0.2);
+            font-family: 'Orbitron', sans-serif;
+            font-weight: bold;
         }
 
-        .nav-top { 
-            text-align: right; 
-            padding: 15px 30px; 
-            background: #000; 
-            border-bottom: 1px solid #222;
-        }
-
-        .nav-link { 
-            color: var(--gold); 
-            font-family: 'Orbitron'; 
-            text-decoration: none; 
-            border: 1px solid var(--primary); 
-            padding: 8px 20px; 
-            border-radius: 5px; 
-            font-size: 0.8em; 
-            transition: 0.3s;
-        }
+        .nav-top { text-align: right; padding: 15px 30px; background: #000; border-bottom: 1px solid #222; }
+        .nav-link { color: var(--gold); font-family: 'Orbitron'; text-decoration: none; border: 1px solid var(--primary); padding: 8px 20px; border-radius: 5px; font-size: 0.8em; transition: 0.3s; }
         .nav-link:hover { background: var(--primary); color: white; }
 
-        header {
-            padding: 100px 20px;
-            background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=2000');
-            background-size: cover;
-            border-bottom: 2px solid var(--primary);
-        }
-
+        header { padding: 100px 20px; border-bottom: 2px solid var(--primary); background: radial-gradient(circle at center, #1a0b2e 0%, #080808 100%); }
+        
         .container { max-width: 1200px; margin: auto; padding: 20px; }
         
         .btn {
-            background: rgba(138, 43, 226, 0.1); 
-            color: white; 
-            padding: 18px 45px;
-            text-decoration: none; 
-            font-weight: bold; 
-            border-radius: 8px; 
-            display: inline-block; 
-            margin-top: 25px; 
-            border: 2px solid var(--primary);
-            transition: 0.3s; 
-            font-family: 'Orbitron';
+            background: rgba(138, 43, 226, 0.1); color: var(--gold); padding: 18px 45px;
+            text-decoration: none; font-weight: bold; border-radius: 8px; display: inline-block;
+            margin-top: 25px; border: 2px solid var(--primary); transition: 0.3s; font-family: 'Orbitron';
         }
-        .btn:hover { 
-            transform: translateY(-3px); 
-            background: var(--primary); 
-            box-shadow: 0 0 30px var(--primary); 
-        }
+        .btn:hover { transform: translateY(-3px); background: var(--primary); color: white; box-shadow: 0 0 30px var(--primary); }
 
-        .pricing { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-            gap: 20px; 
-            margin-top: 50px; 
-        }
+        .pricing { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 50px; }
+        .price-card { background: #111; padding: 35px; border-radius: 15px; border: 1px solid #222; transition: 0.3s; }
+        .price-card:hover { border-color: var(--gold); transform: scale(1.03); }
+        .price-tag { font-size: 2.5em; margin: 15px 0; }
 
-        .price-card {
-            background: #101010; 
-            padding: 35px; 
-            border-radius: 15px;
-            border: 1px solid #222; 
-            transition: 0.3s;
-        }
-        .price-card:hover { 
-            border-color: var(--gold); 
-            transform: scale(1.03); 
-            box-shadow: 0 10px 30px rgba(138, 43, 226, 0.1);
-        }
-        
-        .price-card h3 { 
-            color: var(--primary); 
-            margin-bottom: 10px; 
-            font-size: 1.1em;
-        }
-        
-        /* Prix avec dégradé */
-        .price-tag { 
-            font-size: 2.5em; 
-            font-weight: bold; 
-            margin: 15px 0; 
-            font-family: 'Orbitron', sans-serif;
-        }
-
-        footer { padding: 60px; color: #444; font-size: 0.8em; border-top: 1px solid #222; margin-top: 80px; }
+        footer { padding: 40px; color: #444; font-size: 0.8em; }
     </style>
 </head>
 <body>
-
-    <div class="nav-top">
-        <a href="guide.html" class="nav-link">📖 GUIDE D'INSTALLATION</a>
-    </div>
-
+    <div class="nav-top"><a href="guide.html" class="nav-link">📖 GUIDE D'INSTALLATION</a></div>
     <header>
-        <div class="brand" style="color: white; opacity: 0.7; letter-spacing: 5px; margin-bottom: 15px;">ELITE MANAGER SYSTEM</div>
         <h1 class="gradient-text" style="font-size: 3.5em; margin: 0;">ELITE-CODE-HUNTER</h1>
-        <p style="font-size: 1.2em; color: #ccc; margin-top: 15px;">Sniper Shuffle Automatique 0ms.</p>
+        <p style="color: #aaa; margin-top: 15px;">Le sniper Shuffle n°1. Interception WSS instantanée.</p>
         <a href="https://t.me/S_power_manager_bot" class="btn">ACHETER VIA LE BOT</a>
     </header>
-
     <div class="container">
-        <h2 class="gradient-text" style="margin-top: 80px; font-size: 2.2em;">NOS FORFAITS VIP</h2>
-
+        <h2 class="gradient-text" style="font-size: 2em; margin-top: 50px;">NOS FORFAITS VIP</h2>
         <div class="pricing">
-            <div class="price-card">
-                <h3>1 JOUR</h3>
-                <div class="price-tag gradient-text">$8.0</div>
-                <p>Accès Sniper 24h</p>
-                <a href="https://t.me/S_power_manager_bot" class="btn" style="padding: 12px 25px; font-size: 0.8em;">PAYER</a>
-            </div>
-
-            <div class="price-card">
-                <h3>1 SEMAINE</h3>
-                <div class="price-tag gradient-text">$20.0</div>
-                <p>Accès Sniper 7 jours</p>
-                <a href="https://t.me/S_power_manager_bot" class="btn" style="padding: 12px 25px; font-size: 0.8em;">PAYER</a>
-            </div>
-
-            <div class="price-card">
-                <h3>1 MOIS</h3>
-                <div class="price-tag gradient-text">$50.0</div>
-                <p>Accès Sniper 30 jours</p>
-                <a href="https://t.me/S_power_manager_bot" class="btn" style="padding: 12px 25px; font-size: 0.8em;">PAYER</a>
-            </div>
-
-            <div class="price-card">
-                <h3>3 MOIS</h3>
-                <div class="price-tag gradient-text">$120.0</div>
-                <p>Accès Sniper 90 jours</p>
-                <a href="https://t.me/S_power_manager_bot" class="btn" style="padding: 12px 25px; font-size: 0.8em;">PAYER</a>
-            </div>
-
-            <div class="price-card">
-                <h3>6 MOIS</h3>
-                <div class="price-tag gradient-text">$200.0</div>
-                <p>Accès Sniper 180 jours</p>
-                <a href="https://t.me/S_power_manager_bot" class="btn" style="padding: 12px 25px; font-size: 0.8em;">PAYER</a>
-            </div>
-
-            <div class="price-card" style="border: 2px solid var(--gold); background: linear-gradient(145deg, #101010, #201030);">
+            <div class="price-card"><h3>1 JOUR</h3><div class="price-tag gradient-text">$8.0</div><p>Accès 24h</p></div>
+            <div class="price-card"><h3>1 SEMAINE</h3><div class="price-tag gradient-text">$20.0</div><p>Accès 7 jours</p></div>
+            <div class="price-card"><h3>1 MOIS</h3><div class="price-tag gradient-text">$50.0</div><p>Accès 30 jours</p></div>
+            <div class="price-card"><h3>3 MOIS</h3><div class="price-tag gradient-text">$120.0</div><p>Accès 90 jours</p></div>
+            <div class="price-card"><h3>6 MOIS</h3><div class="price-tag gradient-text">$200.0</div><p>Accès 180 jours</p></div>
+            <div class="price-card" style="border: 2px solid var(--gold);">
                 <h3 style="color: var(--gold);">LIFETIME 💎</h3>
-                <div class="price-tag gradient-text">$350.0</div>
-                <p>Accès Illimité à Vie</p>
-                <a href="https://t.me/S_power_manager_bot" class="btn" style="padding: 12px 25px; font-size: 0.8em; background: var(--gold); color: black; border: none;">PAYER</a>
+                <div class="price-tag gradient-text">$350.0</div><p>Accès Illimité</p>
             </div>
         </div>
     </div>
-
-    <footer>
-        &copy; 2026 ELITE-CODE-HUNTER.
-    </footer>
-
+    <footer>&copy; 2026 ELITE-CODE-HUNTER</footer>
 </body>
 </html>
