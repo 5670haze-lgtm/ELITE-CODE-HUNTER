@@ -17,21 +17,13 @@
 
         .container { max-width: 900px; margin: auto; padding: 40px 20px; }
 
-        .quick-setup { background: rgba(138, 43, 226, 0.05); border: 1px solid rgba(138, 43, 226, 0.3); border-radius: 12px; padding: 30px; margin-bottom: 50px; }
-        .quick-setup h2 { margin-top: 0; display: flex; align-items: center; font-size: 1.2em; color: #00ff00; }
-        .quick-setup h2::before { content: '⚡'; margin-right: 10px; }
-
-        .step-section { margin-bottom: 60px; }
+        .step-section { margin-bottom: 60px; background: var(--card); padding: 30px; border-radius: 12px; border: 1px solid #30363d; }
         .step-title { border-bottom: 1px solid #30363d; padding-bottom: 10px; margin-bottom: 25px; display: flex; align-items: center; }
-        .step-number { background: var(--primary); color: white; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-right: 15px; font-weight: bold; font-size: 0.9em; }
+        .step-number { background: var(--primary); color: white; width: 30px; height: 30px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-right: 15px; font-weight: bold; }
 
-        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; border: 1px solid #30363d; margin: 20px 0; background: #000; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; margin: 20px 0; background: #000; }
         .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
 
-        .btn-store { display: inline-flex; align-items: center; background: #21262d; border: 1px solid #30363d; padding: 10px 20px; border-radius: 6px; color: white; margin-right: 10px; margin-bottom: 10px; transition: 0.2s; font-size: 0.9em; }
-        .btn-store:hover { background: #30363d; border-color: var(--primary); }
-
-        /* Bouton Téléchargement Script */
         .btn-download { 
             display: inline-block; 
             background: linear-gradient(135deg, #8a2be2, #4b0082); 
@@ -42,13 +34,12 @@
             font-family: 'Orbitron';
             text-align: center;
             margin: 20px 0;
-            box-shadow: 0 5px 15px rgba(138, 43, 226, 0.4);
             transition: 0.3s;
         }
-        .btn-download:hover { transform: translateY(-3px); box-shadow: 0 8px 25px var(--primary); }
+        .btn-download:hover { transform: translateY(-3px); box-shadow: 0 5px 20px var(--primary); }
 
-        .troubleshoot { background: #161b22; border-radius: 12px; padding: 30px; border: 1px solid #f1e05a55; }
-        footer { text-align: center; padding: 60px; color: #484f58; font-size: 0.8em; }
+        .alert { background: rgba(241, 224, 90, 0.1); border: 1px solid #f1e05a; padding: 15px; border-radius: 8px; color: #f1e05a; margin: 20px 0; }
+        footer { text-align: center; padding: 40px; color: #484f58; font-size: 0.8em; }
     </style>
 </head>
 <body>
@@ -59,50 +50,50 @@
     </div>
 
     <div class="container">
-        <h1>Guide d'Installation Rapide</h1>
-
-        <div class="quick-setup">
-            <h2>Pré-requis</h2>
-            <p>1. Un compte Shuffle actif.<br>2. Votre forfait VIP activé sur le bot <a href="https://t.me/S_power_manager_bot">@S_power_manager_bot</a>.</p>
-        </div>
+        <h1 style="text-align: center; font-size: 2.5em; margin-bottom: 40px;">GUIDE D'INSTALLATION</h1>
 
         <div class="step-section">
             <h2 class="step-title"><span class="step-number">1</span> Installer Tampermonkey</h2>
-            <p>Téléchargez l'extension officielle pour votre navigateur :</p>
-            <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo" class="btn-store">🌐 Chrome / Brave</a>
-            <a href="https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepbluehaoandjt" class="btn-store">🟦 Microsoft Edge</a>
-        </div>
-
-        <div class="step-section">
-            <h2 class="step-title"><span class="step-number">2</span> Activer le Mode Développeur</h2>
-            <p>Pour autoriser l'exécution du sniper, allez dans vos extensions et activez le <strong>"Mode Développeur"</strong> (Developer Mode) en haut à droite de votre navigateur.</p>
-        </div>
-
-        <div class="step-section">
-            <h2 class="step-title"><span class="step-number">3</span> Télécharger le Script ELITE</h2>
-            <p>Cliquez sur le bouton ci-dessous pour installer la dernière version du script (V82.6) :</p>
-            
-            <a href="ELITE-HUNTER.user.js" class="btn-download">🚀 TÉLÉCHARGER LE SCRIPT (.user.js)</a>
-
-            <p style="font-size: 0.9em; color: #888;">Note : Si Tampermonkey est bien installé, une page s'ouvrira automatiquement pour vous proposer de cliquer sur <strong>"Installer"</strong>.</p>
+            <p>Tampermonkey est l'extension qui permet d'exécuter le script de sniping sur votre navigateur.</p>
             
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/8tyjJD65zws" allowfullscreen></iframe>
+            </div>
+            
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo" target="_blank" style="background: #21262d; padding: 10px 20px; border-radius: 6px; border: 1px solid #30363d; color: white;">Chrome / Brave</a>
+                <a href="https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepbluehaoandjt" target="_blank" style="background: #21262d; padding: 10px 20px; border-radius: 6px; border: 1px solid #30363d; color: white;">Microsoft Edge</a>
             </div>
         </div>
 
         <div class="step-section">
-            <h2 class="step-title"><span class="step-number">4</span> Utilisation sur Shuffle</h2>
-            <p>Connectez-vous à votre compte sur <strong>Shuffle.com</strong>. Le script détecte votre pseudo. Si votre VIP est actif, le voyant passera au <strong style="color: #00ff00;">VERT</strong> et le sniping commencera immédiatement.</p>
+            <h2 class="step-title"><span class="step-number">2</span> Activer le Mode Développeur</h2>
+            <p>Pour permettre l'installation de scripts externes, vous devez activer le mode développeur dans vos extensions.</p>
+            <div class="alert">
+                <strong>Action :</strong> Allez dans <code>chrome://extensions</code> et cochez "Mode Développeur" en haut à droite.
+            </div>
         </div>
 
-        <div class="troubleshoot">
-            <h2>💡 Astuce Performance</h2>
-            <p>Pour une vitesse maximale, laissez l'onglet Shuffle visible (ne réduisez pas la fenêtre du navigateur). Les navigateurs ralentissent les scripts dans les onglets cachés.</p>
+        <div class="step-section" style="text-align: center;">
+            <h2 class="step-title" style="text-align: left;"><span class="step-number">3</span> Installer le Script ELITE</h2>
+            <p>Cliquez sur le bouton ci-dessous. Tampermonkey s'ouvrira automatiquement pour vous proposer l'installation.</p>
+            
+            <a href="ELITE-HUNTER.user.js" class="btn-download">🚀 INSTALLER LE SCRIPT (V82.6)</a>
+            
+            <p style="font-size: 0.8em; color: #888; margin-top: 10px;">Cliquez sur "Installer" dans la fenêtre Tampermonkey qui s'affiche.</p>
+        </div>
+
+        <div class="step-section">
+            <h2 class="step-title"><span class="step-number">4</span> Prêt pour le Sniping</h2>
+            <p>Rendez-vous sur <strong>Shuffle.com</strong>. Le script détectera automatiquement votre compte.</p>
+            <ul>
+                <li>Si votre VIP est actif sur <a href="https://t.me/S_power_manager_bot">@S_power_manager_bot</a>, le sniper démarre.</li>
+                <li>Le statut passera en <strong>CONNECTED</strong> en haut de votre écran.</li>
+            </ul>
         </div>
 
         <footer>
-            &copy; 2026 ELITE-CODE-HUNTER.
+            &copy; 2026 ELITE-CODE-HUNTER. Tous droits réservés.
         </footer>
     </div>
 
