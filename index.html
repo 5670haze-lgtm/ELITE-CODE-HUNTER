@@ -3,62 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GUIDE | ELITE-CODE-HUNTER</title>
+    <title>ELITE-CODE-HUNTER | Sniper Shuffle 0ms</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <style>
         :root { --primary: #8a2be2; --bg: #080808; --card: #121212; }
-        body { background-color: var(--bg); color: white; font-family: 'Roboto', sans-serif; margin: 0; line-height: 1.6; }
-        h1, h2, h3 { font-family: 'Orbitron', sans-serif; color: var(--primary); }
+        body { background-color: var(--bg); color: white; font-family: 'Roboto', sans-serif; margin: 0; text-align: center; }
+        h1, h2, h3, .brand { font-family: 'Orbitron', sans-serif; }
         
-        .nav { padding: 20px; border-bottom: 1px solid #222; background: #000; text-align: left; }
-        .nav a { color: white; text-decoration: none; font-family: 'Orbitron'; font-size: 0.8em; border: 1px solid var(--primary); padding: 8px 15px; border-radius: 5px; transition: 0.3s; }
-        .nav a:hover { background: var(--primary); }
+        /* Barre de Navigation Guide */
+        .nav-top { 
+            text-align: right; 
+            padding: 15px 30px; 
+            background: #000; 
+            border-bottom: 1px solid #222;
+        }
+        .nav-link { 
+            color: white; 
+            font-family: 'Orbitron'; 
+            text-decoration: none; 
+            border: 1px solid var(--primary); 
+            padding: 8px 20px; 
+            border-radius: 5px; 
+            font-size: 0.8em; 
+            transition: 0.3s;
+            box-shadow: 0 0 10px rgba(138, 43, 226, 0.2);
+        }
+        .nav-link:hover { background: var(--primary); box-shadow: 0 0 20px var(--primary); }
 
-        .container { max-width: 800px; margin: auto; padding: 40px 20px; text-align: left; }
-        .step { background: var(--card); padding: 30px; border-radius: 15px; border-left: 5px solid var(--primary); margin-bottom: 30px; }
-        .step-number { background: var(--primary); color: white; width: 30px; height: 30px; display: inline-block; text-align: center; border-radius: 50%; font-weight: bold; margin-right: 10px; font-family: 'Orbitron'; }
+        header {
+            padding: 60px 20px;
+            background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=2000');
+            background-size: cover;
+            border-bottom: 2px solid var(--primary);
+        }
 
-        .warning { background: rgba(255, 0, 0, 0.1); border: 1px solid #ff4b4b; padding: 20px; border-radius: 10px; margin-top: 50px; }
-        footer { text-align: center; padding: 40px; color: #444; font-size: 0.8em; }
-        strong { color: var(--primary); }
+        .container { max-width: 1100px; margin: auto; padding: 20px; }
+        
+        .btn {
+            background: var(--primary); color: white; padding: 18px 45px;
+            text-decoration: none; font-weight: bold; border-radius: 5px;
+            display: inline-block; margin-top: 25px; box-shadow: 0 0 20px rgba(138, 43, 226, 0.4);
+            transition: 0.3s; font-family: 'Orbitron'; border: none;
+        }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 0 30px var(--primary); }
+
+        /* Performance Box */
+        .proof-box { background: var(--card); padding: 40px; border-radius: 15px; border: 1px solid #222; margin: 40px 0; }
+        .speed-row { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: bold; font-family: 'Orbitron'; font-size: 0.9em; }
+        .bar-bg { background: #222; height: 12px; border-radius: 6px; margin-bottom: 25px; overflow: hidden; }
+        .bar-fill { height: 100%; background: var(--primary); width: 2%; box-shadow: 0 0 10px var(--primary); }
+
+        /* Pricing Grid */
+        .pricing { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 50px; }
+        .price-card {
+            background: #181818; padding: 30px; border-radius: 15px;
+            border: 1px solid #333; transition: 0.3s; display: flex; flex-direction: column; justify-content: space-between;
+        }
+        .price-card:hover { border-color: var(--primary); background: #1c1c1c; transform: scale(1.02); }
+        .price-card h3 { color: var(--primary); margin-top: 0; font-size: 1.1em; letter-spacing: 2px; }
+        .price-tag { font-size: 2.5em; font-weight: bold; margin: 15px 0; color: #fff; }
+
+        footer { padding: 60px; color: #444; font-size: 0.9em; border-top: 1px solid #222; margin-top: 80px; }
     </style>
 </head>
 <body>
 
-    <div class="nav">
-        <a href="index.html">← RETOUR ACCUEIL</a>
+    <div class="nav-top">
+        <a href="guide.html" class="nav-link">📖 GUIDE D'INSTALLATION</a>
     </div>
+
+    <header>
+        <div class="brand" style="color: var(--primary); letter-spacing: 3px; margin-bottom: 15px;">ELITE MANAGER SYSTEM</div>
+        <h1 style="font-size: 3em; margin: 0;">ELITE-CODE-HUNTER</h1>
+        <p style="font-size: 1.2em; color: #aaa; margin-top: 15px;">Le sniper Shuffle n°1. Interception WSS instantanée.</p>
+        <a href="https://t.me/S_power_manager_bot" class="btn">ACCÉDER AU BOT MANAGER</a>
+    </header>
 
     <div class="container">
-        <h1>GUIDE D'INSTALLATION</h1>
-        <p>Activez votre sniper <strong>ELITE-CODE-HUNTER</strong> en moins de 2 minutes.</p>
-
-        <div class="step">
-            <h3><span class="step-number">1</span> Activation du Pseudo</h3>
-            <p>Rendez-vous sur le bot <a href="https://t.me/S_power_manager_bot" style="color: var(--primary);">@S_power_manager_bot</a>. Lors de l'achat, le bot enregistrera votre <strong>Pseudo Shuffle</strong>. C'est ce pseudo qui sert de licence automatique.</p>
+        
+        <div class="proof-box">
+            <h2 style="margin-bottom: 40px;">PERFORMANCE ANALYTICS</h2>
+            <div class="speed-row"><span>ELITE-CODE-HUNTER (VIP)</span><span style="color: var(--primary);">45 MS</span></div>
+            <div class="bar-bg"><div class="bar-fill"></div></div>
+            <div class="speed-row"><span>SALONS PUBLICS</span><span style="color: #ff4b4b;">+7.000 MS</span></div>
+            <div class="bar-bg"><div style="background: #ff4b4b; width: 100%; height: 100%;"></div></div>
         </div>
 
-        <div class="step">
-            <h3><span class="step-number">2</span> Installation de l'Extension</h3>
-            <p>Utilisez l'extension <strong>Tampermonkey</strong> (disponible sur Chrome et Brave). Importez le script <code>ELITE-HUNTER.js</code> fourni par le Manager.</p>
+        <h2 style="font-family: 'Orbitron'; margin-top: 60px;">NOS FORFAITS VIP</h2>
+
+        <div class="pricing">
+            <div class="price-card">
+                <h3>1 JOUR</h3>
+                <div class="price-tag">8.0$</div>
+                <p>Accès Sniper 24h</p>
+                <a href="https://t.me/S_power_manager_bot" class="btn" style="padding: 10px 20px; font-size: 0.8em;">ACHETER</a>
+            </div>
+
+            <div class="price-card">
+                <h3>1 SEMAINE</h3>
+                <div class="price-tag">20.0$</div>
+                <p>Accès Sniper 7 jours</p>
+                <a href="https://t.me/S_power_manager_bot" class="btn" style="padding: 10px 20px; font-size: 0.8em;">ACHETER</a>
+            </div>
+
+            <div class="price-card" style="border: 2px solid var(--primary);">
+                <div style="background: var(--primary); color: white; font-size: 0.6em; padding: 3px; border-radius: 3px; margin-bottom: 10px;">POPULAIRE</div>
+                <h3>1 MOIS</h3>
+                <div class="price-tag">50.0$</div>
+                <p>Accès Sniper 30 jours</p>
+                <a href="https://t.me/S_power_manager_bot" class="btn" style="padding: 10px 20px; font-size: 0.8em;">ACHETER</a>
+            </div>
+
+            <div class="price-card">
+                <h3>3 MOIS</h3>
+                <div class="price-tag">120.0$</div>
+                <p>Accès Sniper 90 jours</p>
+                <a href="https://t.me/S_power_manager_bot" class="btn" style="padding: 10px 20px; font-size: 0.8em;">ACHETER</a>
+            </div>
+
+            <div class="price-card">
+                <h3>6 MOIS</h3>
+                <div class="price-tag">200.0$</div>
+                <p>Accès Sniper 180 jours</p>
+                <a href="https://t.me/S_power_manager_bot" class="btn" style="padding: 10px 20px; font-size: 0.8em;">ACHETER</a>
+            </div>
+
+            <div class="price-card" style="background: linear-gradient(145deg, #181818, #2a0052);">
+                <h3>LIFETIME 💎</h3>
+                <div class="price-tag">350.0$</div>
+                <p>Accès Illimité à Vie</p>
+                <a href="https://t.me/S_power_manager_bot" class="btn" style="padding: 10px 20px; font-size: 0.8em;">ACHETER</a>
+            </div>
         </div>
 
-        <div class="step">
-            <h3><span class="step-number">3</span> Connexion Automatique</h3>
-            <p>Une fois sur Shuffle, ouvrez l'interface du script. Entrez votre <strong>Pseudo Shuffle</strong> exact. Le système vérifiera votre abonnement en temps réel sur notre serveur.</p>
-        </div>
-
-        <div class="step">
-            <h3><span class="step-number">4</span> Sniping 0ms</h3>
-            <p>Dès que le voyant est <span style="color: #00ff00;">VERT</span>, le sniper est actif. Il récupère les codes instantanément via notre flux WSS privé.</p>
-        </div>
-
-        <div class="warning">
-            <strong>⚠️ ATTENTION :</strong> Votre abonnement est strictement lié à votre pseudo Shuffle. Toute modification de pseudo ou tentative de double connexion IP entraînera un blocage de l'accès.
-        </div>
-
-        <footer>&copy; 2026 ELITE-CODE-HUNTER</footer>
     </div>
+
+    <footer>
+        &copy; 2026 ELITE-CODE-HUNTER. Tous droits réservés.<br>
+        Le sniping comporte des risques, utilisez-le de manière responsable.
+    </footer>
 
 </body>
 </html>
