@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INSTALLATION | ELITE-CODE-HUNTER</title>
+    <title>GUIDE | ELITE-CODE-HUNTER</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         :root { --primary: #8a2be2; --bg: #0d1117; --card: #161b22; --text: #c9d1d9; }
         body { background-color: var(--bg); color: var(--text); font-family: 'Roboto', sans-serif; margin: 0; line-height: 1.6; }
         h1, h2, h3 { font-family: 'Orbitron', sans-serif; color: white; }
-        a { color: var(--primary); text-decoration: none; font-weight: bold; }
+        a { color: var(--primary); text-decoration: none; }
         
         .nav { padding: 20px; background: #000; border-bottom: 1px solid #30363d; display: flex; justify-content: space-between; align-items: center; }
         .nav a.back { border: 1px solid var(--primary); padding: 8px 15px; border-radius: 6px; font-family: 'Orbitron'; font-size: 0.8em; color: white; transition: 0.3s; }
@@ -17,33 +17,32 @@
 
         .container { max-width: 900px; margin: auto; padding: 40px 20px; }
 
-        .step-section { margin-bottom: 50px; background: var(--card); padding: 35px; border-radius: 15px; border: 1px solid #30363d; }
-        .step-title { border-bottom: 1px solid #30363d; padding-bottom: 15px; margin-bottom: 25px; display: flex; align-items: center; font-size: 1.4em; }
-        .step-number { background: var(--primary); color: white; width: 35px; height: 35px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-right: 15px; font-weight: bold; flex-shrink: 0; }
+        .step-section { margin-bottom: 50px; background: var(--card); padding: 30px; border-radius: 12px; border: 1px solid #30363d; }
+        .step-title { border-bottom: 1px solid #30363d; padding-bottom: 10px; margin-bottom: 25px; display: flex; align-items: center; }
+        .step-number { background: var(--primary); color: white; width: 30px; height: 30px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: justify; margin-right: 15px; font-weight: bold; }
 
-        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px; margin: 25px 0; background: #000; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; margin: 20px 0; background: #000; }
         .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+
+        /* Bot Pic style */
+        .bot-pic { border-radius: 50%; width: 60px; height: 60px; border: 2px solid var(--primary); box-shadow: 0 0 15px rgba(138, 43, 226, 0.5); }
 
         .btn-download { 
             display: inline-block; 
             background: linear-gradient(135deg, #8a2be2, #4b0082); 
             color: white; 
-            padding: 18px 35px; 
-            border-radius: 10px; 
+            padding: 15px 30px; 
+            border-radius: 8px; 
             font-weight: bold; 
             font-family: 'Orbitron';
             text-align: center;
             margin: 20px 0;
             transition: 0.3s;
-            box-shadow: 0 4px 15px rgba(138, 43, 226, 0.4);
         }
-        .btn-download:hover { transform: translateY(-3px); box-shadow: 0 8px 25px var(--primary); }
+        .btn-download:hover { transform: translateY(-3px); box-shadow: 0 5px 20px var(--primary); }
 
-        .code-box { background: #000; padding: 15px; border-radius: 8px; font-family: monospace; color: #00ff00; margin: 10px 0; border: 1px solid #333; }
-        
-        .figure-label { display: block; text-align: center; font-size: 0.85em; color: #8b949e; margin-top: 10px; font-style: italic; }
-
-        footer { text-align: center; padding: 60px; color: #484f58; font-size: 0.8em; }
+        .alert { background: rgba(241, 224, 90, 0.1); border: 1px solid #f1e05a; padding: 15px; border-radius: 8px; color: #f1e05a; margin: 20px 0; }
+        footer { text-align: center; padding: 40px; color: #484f58; font-size: 0.8em; }
     </style>
 </head>
 <body>
@@ -54,65 +53,44 @@
     </div>
 
     <div class="container">
-        <h1 style="text-align: center; font-size: 2.5em; margin-bottom: 10px;">Instructions Détaillées</h1>
-        <p style="text-align: center; color: #8b949e; margin-bottom: 50px;">Suivez ce guide étape par étape pour configurer votre sniper.</p>
+        <h1 style="text-align: center; font-size: 2.2em; margin-bottom: 40px;">GUIDE D'INSTALLATION</h1>
 
-        <div class="step-section">
-            <h2 class="step-title"><span class="step-number">1</span> Installer Tampermonkey</h2>
-            <p>Si vous avez déjà Tampermonkey, passez à l'étape suivante. Sinon, installez l'extension pour votre navigateur :</p>
-            
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/8tyjJD65zws" allowfullscreen></iframe>
+        <div class="step-section" style="display: flex; gap: 20px; align-items: center;">
+            <div style="flex-shrink: 0;">
+                <img src="https://web.telegram.org/k/assets/img/logo_bot.png" alt="Elite Manager Bot" class="bot-pic">
             </div>
-            <span class="figure-label">Figure: Vidéo tutoriel pour installer Tampermonkey</span>
-
-            <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-top: 20px;">
-                <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo" target="_blank" style="background: #21262d; padding: 12px 25px; border-radius: 8px; border: 1px solid #30363d; color: white;">Chrome / Brave / Opera</a>
-                <a href="https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepbluehaoandjt" target="_blank" style="background: #21262d; padding: 12px 25px; border-radius: 8px; border: 1px solid #30363d; color: white;">Microsoft Edge</a>
+            <div>
+                <h2 class="step-title"><span class="step-number">1</span> Activation via le Bot</h2>
+                <p>Allez sur <a href="https://t.me/S_power_manager_bot" target="_blank">@S_power_manager_bot</a>. Choisissez votre forfait et donnez votre pseudo Shuffle exact. Votre accès sera activé instantanément.</p>
             </div>
         </div>
 
         <div class="step-section">
-            <h2 class="step-title"><span class="step-number">2</span> Activer le Mode Développeur</h2>
-            <p>Certains navigateurs bloquent les scripts externes. Vous devez activer le Mode Développeur :</p>
-            <ul>
-                <li>Dans **Chrome/Brave**, allez sur <code class="code-box" style="display:inline; padding: 2px 8px;">chrome://extensions</code> et cochez <strong>"Mode Développeur"</strong> (en haut à droite).</li>
-                <li>Dans **Edge**, allez sur <code class="code-box" style="display:inline; padding: 2px 8px;">edge://extensions</code> et activez le <strong>"Mode Développeur"</strong> (en bas à gauche).</li>
-                <li>Sur la page des extensions, cliquez sur <strong>Détails</strong> sous Tampermonkey et cochez <strong>"Autoriser l'accès aux URL de fichiers"</strong>.</li>
-            </ul>
-            <span class="figure-label">Figure: Activation du Mode Développeur et des accès scripts</span>
+            <h2 class="step-title"><span class="step-number">2</span> Installation</h2>
+            <p>Utilisez l'extension <strong>Tampermonkey</strong> (disponible sur Chrome/Brave/Edge).</p>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px;">
+                <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo" target="_blank" style="background: #21262d; padding: 10px 20px; border-radius: 6px; border: 1px solid #30363d; color: white;">Chrome / Brave</a>
+            </div>
         </div>
 
         <div class="step-section" style="text-align: center;">
-            <h2 class="step-title" style="text-align: left;"><span class="step-number">3</span> Installer le Script ELITE-HUNTER</h2>
-            <p style="text-align: left;">Cliquez sur le lien ci-dessous. Tampermonkey affichera une fenêtre d'installation.</p>
-            
-            <a href="ELITE-HUNTER.user.js" class="btn-download">🚀 INSTALLER ELITE-HUNTER.user.js</a>
-            
-            <p style="text-align: left; font-size: 0.9em; margin-top: 20px;">
-                1. Cliquez sur le bouton <strong>Installer</strong> dans la fenêtre qui s'ouvre.<br>
-                2. Vérifiez que "ELITE-HUNTER" est bien présent dans votre tableau de bord Tampermonkey.
-            </p>
-            <span class="figure-label">Figure: Fenêtre d'installation de Tampermonkey</span>
+            <h2 class="step-title" style="text-align: left;"><span class="step-number">3</span> Installer le Script</h2>
+            <p>Cliquez sur le bouton ci-dessous, puis sur "Installer" dans la fenêtre Tampermonkey.</p>
+            <a href="ELITE-HUNTER.user.js" class="btn-download">🚀 INSTALLER LE SCRIPT (V82.6)</a>
         </div>
 
         <div class="step-section">
-            <h2 class="step-title"><span class="step-number">4</span> Redémarrer le Navigateur</h2>
-            <p>Pour garantir que le script se charge correctement, <strong>fermez toutes les fenêtres de votre navigateur</strong> et rouvrez-le.</p>
-        </div>
-
-        <div class="step-section">
-            <h2 class="step-title"><span class="step-number">5</span> Ouvrir Shuffle.com</h2>
-            <p>Allez sur <strong>Shuffle.com</strong> et connectez-vous à votre compte.</p>
+            <h2 class="step-title"><span class="step-number">4</span> Utilisation sur Shuffle</h2>
+            <p>Connectez-vous à votre compte sur <strong>Shuffle.com</strong>. L'interface du script s'affiche **en bas de la page**.</p>
             <ul>
-                <li>Le script insère un panneau de contrôle **tout en bas de la page**.</li>
-                <li>Cliquez sur le bouton <strong>Connect</strong> pour lier le sniper au serveur.</li>
-                <li>Une fois que le statut affiche <strong style="color: #00ff00;">CONNECTED</strong>, le sniper est prêt à auto-claim les codes.</li>
+                <li>Si votre VIP est actif, le voyant de statut deviendra **MAUVE**.</li>
+                <li>Le texte affichera <strong style="color: #8a2be2;">WSS SÉCURISÉ ●</strong>.</li>
+                <li>Laissez l'onglet ouvert, le claim est 100% automatique.</li>
             </ul>
         </div>
 
         <footer>
-            &copy; 2026 ELITE-CODE-HUNTER. Tous droits réservés.
+            &copy; 2026 ELITE-CODE-HUNTER.
         </footer>
     </div>
 
