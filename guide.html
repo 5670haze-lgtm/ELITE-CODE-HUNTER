@@ -3,96 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GUIDE | ELITE-CODE-HUNTER</title>
+    <title>INSTALLATION | ELITE-CODE-HUNTER</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        :root { --primary: #8a2be2; --bg: #0d1117; --card: #161b22; --text: #c9d1d9; }
-        body { background-color: var(--bg); color: var(--text); font-family: 'Roboto', sans-serif; margin: 0; line-height: 1.6; }
-        h1, h2, h3 { font-family: 'Orbitron', sans-serif; color: white; }
-        a { color: var(--primary); text-decoration: none; }
+        :root { --primary: #8a2be2; --gold: #ebcc8a; --bg: #0d1117; --card: #161b22; }
+        body { background-color: var(--bg); color: #c9d1d9; font-family: 'Roboto', sans-serif; margin: 0; line-height: 1.6; }
         
-        .nav { padding: 20px; background: #000; border-bottom: 1px solid #30363d; display: flex; justify-content: space-between; align-items: center; }
-        .nav a.back { border: 1px solid var(--primary); padding: 8px 15px; border-radius: 6px; font-family: 'Orbitron'; font-size: 0.8em; color: white; transition: 0.3s; }
-        .nav a.back:hover { background: var(--primary); }
+        .gradient-text {
+            background: linear-gradient(135deg, #8a2be2 0%, #ebcc8a 50%, #8a2be2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        .nav { padding: 20px; background: #000; border-bottom: 1px solid #30363d; display: flex; justify-content: space-between; }
+        .nav a.back { border: 1px solid var(--primary); padding: 8px 15px; border-radius: 6px; color: white; text-decoration: none; font-family: 'Orbitron'; font-size: 0.8em; }
 
         .container { max-width: 900px; margin: auto; padding: 40px 20px; }
-
         .step-section { margin-bottom: 50px; background: var(--card); padding: 30px; border-radius: 12px; border: 1px solid #30363d; }
-        .step-title { border-bottom: 1px solid #30363d; padding-bottom: 10px; margin-bottom: 25px; display: flex; align-items: center; }
-        .step-number { background: var(--primary); color: white; width: 30px; height: 30px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: justify; margin-right: 15px; font-weight: bold; }
+        .step-number { background: var(--primary); color: white; width: 30px; height: 30px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-right: 15px; font-weight: bold; }
 
-        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; margin: 20px 0; background: #000; }
-        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
-
-        /* Bot Pic style */
-        .bot-pic { border-radius: 50%; width: 60px; height: 60px; border: 2px solid var(--primary); box-shadow: 0 0 15px rgba(138, 43, 226, 0.5); }
-
+        .bot-pic { border-radius: 50%; width: 60px; height: 60px; border: 2px solid var(--primary); box-shadow: 0 0 15px var(--primary); }
+        
         .btn-download { 
-            display: inline-block; 
-            background: linear-gradient(135deg, #8a2be2, #4b0082); 
-            color: white; 
-            padding: 15px 30px; 
-            border-radius: 8px; 
-            font-weight: bold; 
-            font-family: 'Orbitron';
-            text-align: center;
-            margin: 20px 0;
-            transition: 0.3s;
+            display: inline-block; background: linear-gradient(135deg, #8a2be2, #4b0082); 
+            color: white; padding: 15px 30px; border-radius: 8px; font-weight: bold; 
+            text-decoration: none; font-family: 'Orbitron'; margin: 20px 0; transition: 0.3s;
         }
         .btn-download:hover { transform: translateY(-3px); box-shadow: 0 5px 20px var(--primary); }
 
-        .alert { background: rgba(241, 224, 90, 0.1); border: 1px solid #f1e05a; padding: 15px; border-radius: 8px; color: #f1e05a; margin: 20px 0; }
-        footer { text-align: center; padding: 40px; color: #484f58; font-size: 0.8em; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; margin-top: 20px; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
     </style>
 </head>
 <body>
-
     <div class="nav">
-        <span style="font-family: 'Orbitron'; font-weight: bold; color: var(--primary);">ELITE-CODE-HUNTER</span>
-        <a href="index.html" class="back">← RETOUR ACCUEIL</a>
+        <span class="gradient-text" style="font-weight: bold;">ELITE-CODE-HUNTER</span>
+        <a href="index.html" class="back">← ACCUEIL</a>
     </div>
 
     <div class="container">
-        <h1 style="text-align: center; font-size: 2.2em; margin-bottom: 40px;">GUIDE D'INSTALLATION</h1>
+        <h1 class="gradient-text" style="text-align: center; font-size: 2.2em; margin-bottom: 40px;">GUIDE D'INSTALLATION</h1>
 
         <div class="step-section" style="display: flex; gap: 20px; align-items: center;">
-            <div style="flex-shrink: 0;">
-                <img src="https://web.telegram.org/k/assets/img/logo_bot.png" alt="Elite Manager Bot" class="bot-pic">
-            </div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" class="bot-pic">
             <div>
-                <h2 class="step-title"><span class="step-number">1</span> Activation via le Bot</h2>
-                <p>Allez sur <a href="https://t.me/S_power_manager_bot" target="_blank">@S_power_manager_bot</a>. Choisissez votre forfait et donnez votre pseudo Shuffle exact. Votre accès sera activé instantanément.</p>
+                <h2 class="gradient-text"><span class="step-number">1</span> Activation via le Bot</h2>
+                <p>Allez sur <a href="https://t.me/S_power_manager_bot" target="_blank" style="color: var(--gold);">@S_power_manager_bot</a> pour activer votre VIP.</p>
             </div>
         </div>
 
         <div class="step-section">
-            <h2 class="step-title"><span class="step-number">2</span> Installation</h2>
-            <p>Utilisez l'extension <strong>Tampermonkey</strong> (disponible sur Chrome/Brave/Edge).</p>
-            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px;">
-                <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo" target="_blank" style="background: #21262d; padding: 10px 20px; border-radius: 6px; border: 1px solid #30363d; color: white;">Chrome / Brave</a>
+            <h2 class="gradient-text"><span class="step-number">2</span> Installer Tampermonkey</h2>
+            <p>Installez l'extension pour votre navigateur :</p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/8tyjJD65zws" allowfullscreen></iframe>
             </div>
         </div>
 
         <div class="step-section" style="text-align: center;">
-            <h2 class="step-title" style="text-align: left;"><span class="step-number">3</span> Installer le Script</h2>
-            <p>Cliquez sur le bouton ci-dessous, puis sur "Installer" dans la fenêtre Tampermonkey.</p>
-            <a href="ELITE-HUNTER.user.js" class="btn-download">🚀 INSTALLER LE SCRIPT (V82.6)</a>
+            <h2 class="gradient-text" style="text-align: left;"><span class="step-number">3</span> Installer le Script</h2>
+            <a href="ELITE-HUNTER.user.js" class="btn-download">🚀 TÉLÉCHARGER LE SCRIPT (.user.js)</a>
         </div>
 
         <div class="step-section">
-            <h2 class="step-title"><span class="step-number">4</span> Utilisation sur Shuffle</h2>
-            <p>Connectez-vous à votre compte sur <strong>Shuffle.com</strong>. L'interface du script s'affiche **en bas de la page**.</p>
+            <h2 class="gradient-text"><span class="step-number">4</span> Connexion Shuffle</h2>
+            <p>Rendez-vous sur <strong>Shuffle.com</strong>. L'interface s'affiche **en bas de la page**.</p>
             <ul>
-                <li>Si votre VIP est actif, le voyant de statut deviendra **MAUVE**.</li>
-                <li>Le texte affichera <strong style="color: #8a2be2;">WSS SÉCURISÉ ●</strong>.</li>
-                <li>Laissez l'onglet ouvert, le claim est 100% automatique.</li>
+                <li>Une fois connecté, le statut affichera <strong style="color: #8a2be2;">WSS SÉCURISÉ ●</strong>.</li>
             </ul>
         </div>
-
-        <footer>
-            &copy; 2026 ELITE-CODE-HUNTER.
-        </footer>
     </div>
-
 </body>
 </html>
