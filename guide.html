@@ -3,224 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GUIDE D'INSTALLATION | ELITE-CODE-HUNTER</title>
+    <title>INSTALLATION | ELITE-CODE-HUNTER</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        :root { --primary: #8a2be2; --bg: #0d1117; --card: #161b22; --text: #c9d1d9; --gold: #ebcc8a; }
-        body { background-color: var(--bg); color: var(--text); font-family: 'Roboto', sans-serif; margin: 0; line-height: 1.6; }
-        h1, h2, h3 { font-family: 'Orbitron', sans-serif; color: white; text-transform: uppercase; letter-spacing: 1px; }
-        a { color: var(--primary); text-decoration: none; font-weight: bold; transition: 0.3s; }
-        a:hover { color: var(--gold); }
+        :root { --primary: #8a2be2; --gold: #ebcc8a; --bg: #0d1117; --card: #161b22; }
+        body { background-color: var(--bg); color: #c9d1d9; font-family: 'Roboto', sans-serif; margin: 0; line-height: 1.6; }
         
+        .gradient-text {
+            background: linear-gradient(135deg, #8a2be2 0%, #ebcc8a 50%, #8a2be2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: bold;
+        }
+
         .nav { padding: 20px; background: #000; border-bottom: 1px solid #30363d; display: flex; justify-content: space-between; align-items: center; }
-        .nav a.back { border: 1px solid var(--primary); padding: 8px 15px; border-radius: 6px; font-family: 'Orbitron'; font-size: 0.8em; color: white; }
-        .nav a.back:hover { background: var(--primary); }
+        .nav a.back { border: 1px solid var(--primary); padding: 8px 15px; border-radius: 6px; color: white; text-decoration: none; font-family: 'Orbitron'; font-size: 0.8em; transition: 0.3s; }
+        .nav a.back:hover { background: var(--primary); box-shadow: 0 0 15px var(--primary); }
 
         .container { max-width: 900px; margin: auto; padding: 40px 20px; }
+        .step-section { margin-bottom: 60px; background: var(--card); padding: 35px; border-radius: 12px; border: 1px solid #30363d; }
+        .step-number { background: var(--primary); color: white; width: 35px; height: 35px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-right: 15px; font-weight: bold; }
 
-        /* Bloc Quick Setup (Vert) */
-        .quick-setup { background: rgba(0, 255, 128, 0.05); border: 1px solid rgba(0, 255, 128, 0.2); border-radius: 12px; padding: 30px; margin-bottom: 50px; }
-        .quick-setup h2 { margin-top: 0; display: flex; align-items: center; color: #00ff80; font-size: 1.2em; }
-        .quick-setup h2::before { content: '⚡'; margin-right: 15px; font-size: 1.2em; }
-        .quick-setup ol { padding-left: 20px; margin: 0; }
-        .quick-setup li { margin-bottom: 10px; }
-
-        /* Sections détaillées */
-        .step-section { margin-bottom: 60px; }
-        .step-title { border-bottom: 1px solid #30363d; padding-bottom: 15px; margin-bottom: 25px; display: flex; align-items: center; font-size: 1.3em; }
-        .step-number { background: var(--primary); color: white; width: 32px; height: 32px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-right: 15px; font-weight: bold; flex-shrink: 0; }
-
-        /* Style pour les images d'explication */
-        .figure-box { margin: 25px 0; text-align: center; }
-        .figure-box img { max-width: 100%; height: auto; border-radius: 8px; border: 1px solid #30363d; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+        .figure-box { margin: 25px 0; text-align: center; background: #000; padding: 15px; border-radius: 10px; border: 1px solid #333; }
+        .figure-box img { max-width: 100%; height: auto; border-radius: 5px; border: 1px solid var(--primary); }
         .figure-label { display: block; font-size: 0.85em; color: #8b949e; margin-top: 10px; font-style: italic; }
 
-        /* Vidéo */
-        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; border: 1px solid #30363d; margin: 20px 0; background: #000; }
+        .btn-store { display: inline-block; background: #21262d; border: 1px solid var(--primary); padding: 12px 20px; border-radius: 6px; color: white; text-decoration: none; margin: 5px; transition: 0.3s; }
+        .btn-store:hover { background: var(--primary); color: white; }
+
+        .canary-box { background: rgba(235, 204, 138, 0.05); border: 1px solid var(--gold); padding: 25px; border-radius: 12px; margin-bottom: 40px; border-left: 5px solid var(--gold); }
+        
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; margin: 20px 0; }
         .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
 
-        /* Boutons stores */
-        .btn-store { display: inline-flex; align-items: center; background: #21262d; border: 1px solid #30363d; padding: 10px 20px; border-radius: 6px; color: white; margin-right: 10px; margin-bottom: 10px; transition: 0.2s; font-size: 0.9em; }
-        .btn-store:hover { background: #30363d; border-color: var(--primary); }
-
-        /* Bloc Troubleshooting (Jaune) */
-        .troubleshoot { background: rgba(241, 224, 90, 0.05); border-radius: 12px; padding: 30px; border: 1px solid rgba(241, 224, 90, 0.2); margin-top: 60px; }
-        .troubleshoot h2 { color: #f1e05a; font-size: 1.2em; margin-top: 0; display: flex; align-items: center; }
-        .troubleshoot h2::before { content: '🛠️'; margin-right: 15px; }
-        
-        .tip-box { background: rgba(241, 224, 90, 0.1); border-radius: 8px; padding: 15px; border-left: 4px solid #f1e05a; color: #f1e05a; margin-bottom: 25px; font-size: 0.9em; }
-        
-        .problem-item { margin-bottom: 20px; border-bottom: 1px dotted #30363d; padding-bottom: 15px; }
-        .problem-item strong { color: white; display: block; margin-bottom: 5px; }
-        .problem-item em { color: #ff4b4b; font-style: normal; }
-
-        footer { text-align: center; padding: 60px; color: #484f58; font-size: 0.8em; border-top: 1px solid #30363d; margin-top: 50px; }
+        footer { text-align: center; padding: 50px; color: #444; font-size: 0.8em; border-top: 1px solid #222; }
     </style>
 </head>
 <body>
 
     <div class="nav">
-        <span style="font-family: 'Orbitron'; font-weight: bold; color: var(--primary);">ELITE-CODE-HUNTER</span>
+        <span class="gradient-text">ELITE-CODE-HUNTER</span>
         <a href="index.html" class="back">← RETOUR ACCUEIL</a>
     </div>
 
     <div class="container">
-        <h1>GUIDE D'INSTALLATION COMPLET</h1>
-        <p>Suivez attentivement ces étapes pour configurer votre sniper automatique **ELITE-CODE-HUNTER**.</p>
+        <h1 class="gradient-text" style="text-align: center; font-size: 2.8em; margin-bottom: 40px;">GUIDE D'INSTALLATION</h1>
 
-        <div class="quick-setup">
-            <h2>Quick Setup (Instructions Rapides)</h2>
-            <ol>
-                <li>Installez <strong>Tampermonkey</strong> sur votre navigateur. (<a href="#step1">Guide détaillé</a>)J'ai pris note de votre demande concernant l'ajout d'images pour les explications détaillées de l'installation de Tampermonkey, de l'activation du Mode Développeur et de l'installation du script ELITE-CODE-HUNTER. 
-
-Veuillez trouver ci-dessous le code complet mis à jour pour votre fichier `guide.html`, qui intègre ces éléments ainsi que la recommandation d'utiliser Google Chrome Canary pour une vitesse maximale.
-
----
-
-### Code complet pour `guide.html`
-
-```html
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GUIDE D'INSTALLATION | ELITE-CODE-HUNTER</title>
-    <link href="[https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap](https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap)" rel="stylesheet">
-    <style>
-        :root { --primary: #8a2be2; --bg: #0d1117; --card: #161b22; --text: #c9d1d9; --gold: #ebcc8a; }
-        body { background-color: var(--bg); color: var(--text); font-family: 'Roboto', sans-serif; margin: 0; line-height: 1.6; }
-        h1, h2, h3 { font-family: 'Orbitron', sans-serif; color: white; text-transform: uppercase; letter-spacing: 1px; }
-        a { color: var(--primary); text-decoration: none; font-weight: bold; transition: 0.3s; }
-        a:hover { color: var(--gold); }
-        
-        .nav { padding: 20px; background: #000; border-bottom: 1px solid #30363d; display: flex; justify-content: space-between; align-items: center; }
-        .nav a.back { border: 1px solid var(--primary); padding: 8px 15px; border-radius: 6px; font-family: 'Orbitron'; font-size: 0.8em; color: white; }
-        .nav a.back:hover { background: var(--primary); }
-
-        .container { max-width: 900px; margin: auto; padding: 40px 20px; }
-
-        .quick-setup { background: rgba(0, 255, 128, 0.05); border: 1px solid rgba(0, 255, 128, 0.2); border-radius: 12px; padding: 30px; margin-bottom: 50px; }
-        .quick-setup h2 { margin-top: 0; display: flex; align-items: center; color: #00ff80; font-size: 1.2em; }
-        .quick-setup h2::before { content: '⚡'; margin-right: 15px; font-size: 1.2em; }
-        .quick-setup ol { padding-left: 20px; margin: 0; }
-        .quick-setup li { margin-bottom: 10px; }
-
-        .step-section { margin-bottom: 60px; }
-        .step-title { border-bottom: 1px solid #30363d; padding-bottom: 15px; margin-bottom: 25px; display: flex; align-items: center; font-size: 1.3em; }
-        .step-number { background: var(--primary); color: white; width: 32px; height: 32px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-right: 15px; font-weight: bold; flex-shrink: 0; }
-
-        .figure-box { margin: 25px 0; text-align: center; }
-        .figure-box img { max-width: 100%; height: auto; border-radius: 8px; border: 1px solid #30363d; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
-        .figure-label { display: block; font-size: 0.85em; color: #8b949e; margin-top: 10px; font-style: italic; }
-
-        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; border: 1px solid #30363d; margin: 20px 0; background: #000; }
-        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
-
-        .btn-store { display: inline-flex; align-items: center; background: #21262d; border: 1px solid #30363d; padding: 10px 20px; border-radius: 6px; color: white; margin-right: 10px; margin-bottom: 10px; transition: 0.2s; font-size: 0.9em; }
-        .btn-store:hover { background: #30363d; border-color: var(--primary); }
-
-        .troubleshoot { background: rgba(241, 224, 90, 0.05); border-radius: 12px; padding: 30px; border: 1px solid rgba(241, 224, 90, 0.2); margin-top: 60px; }
-        .troubleshoot h2 { color: #f1e05a; font-size: 1.2em; margin-top: 0; display: flex; align-items: center; }
-        .troubleshoot h2::before { content: '🛠️'; margin-right: 15px; }
-        
-        .tip-box { background: rgba(241, 224, 90, 0.1); border-radius: 8px; padding: 15px; border-left: 4px solid #f1e05a; color: #f1e05a; margin-bottom: 25px; font-size: 0.9em; }
-        
-        .problem-item { margin-bottom: 20px; border-bottom: 1px dotted #30363d; padding-bottom: 15px; }
-        .problem-item strong { color: white; display: block; margin-bottom: 5px; }
-        .problem-item em { color: #ff4b4b; font-style: normal; }
-
-        footer { text-align: center; padding: 60px; color: #484f58; font-size: 0.8em; border-top: 1px solid #30363d; margin-top: 50px; }
-    </style>
-</head>
-<body>
-
-    <div class="nav">
-        <span style="font-family: 'Orbitron'; font-weight: bold; color: var(--primary);">ELITE-CODE-HUNTER</span>
-        <a href="index.html" class="back">← RETOUR ACCUEIL</a>
-    </div>
-
-    <div class="container">
-        <h1>GUIDE D'INSTALLATION COMPLET</h1>
-        <p>Suivez attentivement ces étapes pour configurer votre sniper automatique <strong>ELITE-CODE-HUNTER</strong>.</p>
-
-        <div class="quick-setup">
-            <h2>Quick Setup (Instructions Rapides)</h2>
-            <ol>
-                <li>Installez <strong>Tampermonkey</strong> sur votre navigateur.</li>
-                <li>Activez le <strong>Mode Développeur</strong> si nécessaire.</li>
-                <li>Installez le script <strong>ELITE-CODE-HUNTER</strong>.</li>
-                <li>Redémarrez votre navigateur et connectez-vous à <strong>Shuffle.com</strong>.</li>
-            </ol>
+        <div class="canary-box">
+            <h3 style="color: var(--gold); margin-top: 0;">⚡ CONSEIL PERFORMANCE</h3>
+            <p>Pour une vitesse d'interception maximale (0ms), nous recommandons l'usage de <strong>Google Chrome Canary</strong>.</p>
+            <a href="https://www.google.com/intl/fr/chrome/canary/" target="_blank" class="btn-store">Télécharger Chrome Canary</a>
         </div>
 
-        <div class="step-section" id="step1">
-            <h2 class="step-title"><span class="step-number">1</span> Installer Tampermonkey</h2>
-            <p>Si vous avez déjà Tampermonkey, passez à l'étape suivante. Sinon, installez l'extension pour votre navigateur :</p>
+        <div class="step-section">
+            <h2 class="gradient-text"><span class="step-number">1</span> Installer Tampermonkey</h2>
+            <p>Ajoutez l'extension Tampermonkey à votre navigateur pour gérer le script.</p>
+            
             <div class="figure-box">
-                <img src="path/to/installing_tampermonkey.png" alt="Installation de Tampermonkey">
-                <span class="figure-label">Figure : Installation de Tampermonkey</span>
+                <img src="step1.png" alt="Installation Tampermonkey">
+                <span class="figure-label">Figure 1 : Installation de l'extension Tampermonkey</span>
             </div>
+
             <div class="video-container">
-                <iframe src="[https://www.youtube.com/embed/8tyjJD65zws](https://www.youtube.com/embed/8tyjJD65zws)" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/8tyjJD65zws" allowfullscreen></iframe>
             </div>
-            <div style="margin-top: 20px;">
-                <a href="[https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)" class="btn-store">🌐 Chrome Web Store</a>
-                <a href="[https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepbluehaoandjt](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepbluehaoandjt)" class="btn-store">🟦 Microsoft Edge</a>
-            </div>
-        </div>
 
-        <div class="step-section" id="step2">
-            <h2 class="step-title"><span class="step-number">2</span> Activer le Mode Développeur</h2>
-            <p>Certains navigateurs Chromium bloquent les scripts externes. Activez le Mode Développeur :</p>
-            <div class="figure-box">
-                <img src="path/to/enabling_developer_mode.png" alt="Activation du Mode Développeur">
-                <span class="figure-label">Figure : Activation du Mode Développeur sur Chrome</span>
+            <div style="text-align: center;">
+                <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo" target="_blank" class="btn-store">Aller sur le Chrome Store</a>
             </div>
-            <ul>
-                <li>Allez dans vos extensions et cochez <strong>"Mode Développeur"</strong> (Developer Mode) en haut à droite.</li>
-                <li>Dans les détails de Tampermonkey, activez <strong>"Autoriser l'accès aux URL de fichiers"</strong>.</li>
-            </ul>
-        </div>
-
-        <div class="step-section" id="step3">
-            <h2 class="step-title"><span class="step-number">3</span> Installer le Script ELITE-CODE-HUNTER</h2>
-            <p>Cliquez sur le lien fourni par le bot pour installer la dernière version du script.</p>
-            <div class="figure-box">
-                <img src="path/to/installing_script.png" alt="Installation du script">
-                <span class="figure-label">Figure : Fenêtre d'installation de Tampermonkey</span>
-            </div>
-            <p>Une page Tampermonkey s'ouvrira automatiquement pour vous proposer de cliquer sur <strong>"Installer"</strong>.</p>
         </div>
 
         <div class="step-section">
-            <h2 class="step-title"><span class="step-number">4</span> Recommandation de Navigateur</h2>
-            <p>Pour une vitesse et une fluidité optimales, nous vous recommandons vivement d'utiliser <strong>Google Chrome Canary</strong>.</p>
-            <a href="[https://www.google.com/intl/fr/chrome/canary/](https://www.google.com/intl/fr/chrome/canary/)" class="btn-store">🌐 Télécharger Google Chrome Canary</a>
+            <h2 class="gradient-text"><span class="step-number">2</span> Configurer Tampermonkey</h2>
+            <p>Activez le <strong>Mode Développeur</strong> dans vos extensions et autorisez l'accès aux fichiers dans les réglages de Tampermonkey.</p>
+            
+            <div class="figure-box">
+                <img src="step2.png" alt="Réglages Tampermonkey">
+                <span class="figure-label">Figure 2 : Activation du mode développeur et accès aux URL</span>
+            </div>
         </div>
 
         <div class="step-section">
-            <h2 class="step-title"><span class="step-number">5</span> Utilisation sur Shuffle.com</h2>
-            <p>Connectez-vous à votre compte sur <strong>Shuffle.com</strong>. Le script détecte votre pseudo Shuffle automatiquement.</p>
-            <ul>
-                <li>Le statut affichera <strong style="color: #00ff00;">"CONNECTED (0ms)"</strong> une fois la connexion établie.</li>
-            </ul>
+            <h2 class="gradient-text"><span class="step-number">3</span> Installer ELITE-CODE-HUNTER</h2>
+            <p>Cliquez sur le bouton ci-dessous pour installer le script. La fenêtre de confirmation Tampermonkey s'ouvrira.</p>
+            
+            <div class="figure-box">
+                <img src="step3.png" alt="Installation du script">
+                <span class="figure-label">Figure 3 : Page d'installation du script ELITE-CODE-HUNTER</span>
+            </div>
+
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="ELITE-HUNTER.user.js" class="btn-store" style="background: var(--primary); padding: 15px 30px; font-family: 'Orbitron'; font-weight: bold; border: none;">🚀 INSTALLER LE SCRIPT V82.6</a>
+            </div>
         </div>
 
-        <div class="troubleshoot">
-            <h2>Dépannage & Astuces</h2>
-            <div class="problem-item">
-                <strong>Le script n'apparaît pas sur Shuffle :</strong>
-                Vérifiez que Tampermonkey est bien activé et que le Mode Développeur est activé.
-            </div>
-            <div class="problem-item">
-                <strong>Message "Abonnement Expiré" :</strong>
-                Assurez-vous d'être connecté avec le bon pseudo Shuffle.
-            </div>
+        <div class="step-section">
+            <h2 class="gradient-text"><span class="step-number">4</span> Vérification Finale</h2>
+            <p>Rendez-vous sur <strong>Shuffle.com</strong>. Si l'installation est réussie, le voyant en bas de page affichera :</p>
+            <p style="text-align: center; background: #000; padding: 15px; border-radius: 8px; border: 1px solid var(--primary); font-family: 'Orbitron'; color: var(--primary); font-weight: bold;">
+                WSS SÉCURISÉ ●
+            </p>
         </div>
 
         <footer>
-            &copy; 2026 ELITE-CODE-HUNTER.
+            &copy; 2026 ELITE-CODE-HUNTER - Tous droits réservés.
         </footer>
     </div>
 
