@@ -10,8 +10,12 @@
         body { background-color: var(--bg); color: white; font-family: 'Roboto', sans-serif; margin: 0; text-align: center; }
         h1, h2, h3, .brand { font-family: 'Orbitron', sans-serif; }
         
+        .nav-top { text-align: right; padding: 20px; background: #000; border-bottom: 1px solid #111; }
+        .nav-link { color: white; font-family: 'Orbitron'; text-decoration: none; border: 1px solid var(--primary); padding: 8px 20px; border-radius: 5px; font-size: 0.8em; transition: 0.3s; }
+        .nav-link:hover { background: var(--primary); }
+
         header {
-            padding: 80px 20px;
+            padding: 60px 20px;
             background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=2000');
             background-size: cover;
             border-bottom: 2px solid var(--primary);
@@ -22,7 +26,7 @@
             background: var(--primary); color: white; padding: 18px 45px;
             text-decoration: none; font-weight: bold; border-radius: 5px;
             display: inline-block; margin-top: 25px; box-shadow: 0 0 20px rgba(138, 43, 226, 0.4);
-            transition: 0.3s; font-family: 'Orbitron';
+            transition: 0.3s; font-family: 'Orbitron'; border: none; cursor: pointer;
         }
         .btn:hover { transform: translateY(-3px); box-shadow: 0 0 30px var(--primary); }
 
@@ -38,12 +42,16 @@
         .proof-box { background: var(--card); padding: 40px; border-radius: 15px; border: 1px solid #222; margin: 50px 0; }
         .speed-row { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: bold; }
         .bar-bg { background: #222; height: 12px; border-radius: 6px; margin-bottom: 25px; overflow: hidden; }
-        .bar-fill { height: 100%; background: var(--primary); box-shadow: 0 0 10px var(--primary); }
+        .bar-fill { height: 100%; background: var(--primary); width: 2%; box-shadow: 0 0 10px var(--primary); }
 
         footer { padding: 60px; color: #444; font-size: 0.9em; border-top: 1px solid #222; margin-top: 80px; }
     </style>
 </head>
 <body>
+
+    <div class="nav-top">
+        <a href="guide.html" class="nav-link">📖 GUIDE D'INSTALLATION</a>
+    </div>
 
     <header>
         <div class="brand" style="color: var(--primary); letter-spacing: 3px; margin-bottom: 15px;">ELITE MANAGER SYSTEM</div>
@@ -57,7 +65,7 @@
         <div class="proof-box">
             <h2 style="margin-bottom: 40px;">PERFORMANCE ANALYTICS</h2>
             <div class="speed-row"><span>ELITE-CODE-HUNTER (VIP)</span><span style="color: var(--primary);">45 MS</span></div>
-            <div class="bar-bg"><div class="bar-fill" style="width: 2%;"></div></div>
+            <div class="bar-bg"><div class="bar-fill"></div></div>
             <div class="speed-row"><span>SALONS PUBLICS</span><span style="color: #ff4b4b;">+7.000 MS</span></div>
             <div class="bar-bg"><div style="background: #ff4b4b; width: 100%; height: 100%;"></div></div>
         </div>
@@ -65,54 +73,16 @@
         <h2 style="font-family: 'Orbitron';">NOS FORFAITS VIP</h2>
 
         <div class="pricing">
-            <div class="price-card">
-                <h3>1 JOUR</h3>
-                <div class="price-tag">8.0$</div>
-                <p>Accès Sniper 24h</p>
-                <a href="https://t.me/S_power_manager_bot" class="btn" style="padding: 10px 20px; font-size: 0.8em;">PAYER</a>
-            </div>
-
-            <div class="price-card">
-                <h3>1 SEMAINE</h3>
-                <div class="price-tag">20.0$</div>
-                <p>Accès Sniper 7j</p>
-                <a href="https://t.me/S_power_manager_bot" class="btn" style="padding: 10px 20px; font-size: 0.8em;">PAYER</a>
-            </div>
-
-            <div class="price-card" style="border: 2px solid var(--primary);">
-                <h3>1 MOIS</h3>
-                <div class="price-tag">50.0$</div>
-                <p>Accès Sniper 30j</p>
-                <a href="https://t.me/S_power_manager_bot" class="btn" style="padding: 10px 20px; font-size: 0.8em;">PAYER</a>
-            </div>
-
-            <div class="price-card">
-                <h3>3 MOIS</h3>
-                <div class="price-tag">120.0$</div>
-                <p>Accès Sniper 90j</p>
-                <a href="https://t.me/S_power_manager_bot" class="btn" style="padding: 10px 20px; font-size: 0.8em;">PAYER</a>
-            </div>
-
-            <div class="price-card">
-                <h3>6 MOIS</h3>
-                <div class="price-tag">200.0$</div>
-                <p>Accès Sniper 180j</p>
-                <a href="https://t.me/S_power_manager_bot" class="btn" style="padding: 10px 20px; font-size: 0.8em;">PAYER</a>
-            </div>
-
-            <div class="price-card" style="background: linear-gradient(145deg, #181818, #2a0052);">
-                <h3>LIFETIME 💎</h3>
-                <div class="price-tag">350.0$</div>
-                <p>Accès Illimité</p>
-                <a href="https://t.me/S_power_manager_bot" class="btn" style="padding: 10px 20px; font-size: 0.8em;">PAYER</a>
-            </div>
+            <div class="price-card"><h3>1 JOUR</h3><div class="price-tag">8.0$</div><p>Accès Sniper 24h</p><a href="https://t.me/S_power_manager_bot" class="btn" style="padding: 10px 20px; font-size: 0.8em;">PAYER</a></div>
+            <div class="price-card"><h3>1 SEMAINE</h3><div class="price-tag">20.0$</div><p>Accès Sniper 7j</p><a href="https://t.me/S_power_manager_bot" class="btn" style="padding: 10px 20px; font-size: 0.8em;">PAYER</a></div>
+            <div class="price-card" style="border: 2px solid var(--primary);"><h3>1 MOIS</h3><div class="price-tag">50.0$</div><p>Accès Sniper 30j</p><a href="https://t.me/S_power_manager_bot" class="btn" style="padding: 10px 20px; font-size: 0.8em;">PAYER</a></div>
+            <div class="price-card"><h3>3 MOIS</h3><div class="price-tag">120.0$</div><p>Accès Sniper 90j</p><a href="https://t.me/S_power_manager_bot" class="btn" style="padding: 10px 20px; font-size: 0.8em;">PAYER</a></div>
+            <div class="price-card"><h3>6 MOIS</h3><div class="price-tag">200.0$</div><p>Accès Sniper 180j</p><a href="https://t.me/S_power_manager_bot" class="btn" style="padding: 10px 20px; font-size: 0.8em;">PAYER</a></div>
+            <div class="price-card" style="background: linear-gradient(145deg, #181818, #2a0052);"><h3>LIFETIME 💎</h3><div class="price-tag">350.0$</div><p>Accès Illimité</p><a href="https://t.me/S_power_manager_bot" class="btn" style="padding: 10px 20px; font-size: 0.8em;">PAYER</a></div>
         </div>
-
     </div>
 
-    <footer>
-        &copy; 2026 ELITE-CODE-HUNTER. Contactez le bot pour toute question technique.
-    </footer>
+    <footer>&copy; 2026 ELITE-CODE-HUNTER. Contactez le bot pour toute question technique.</footer>
 
 </body>
 </html>
